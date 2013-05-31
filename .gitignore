@@ -1,0 +1,2 @@
+# Ignore the sign certificate file
+*.pem

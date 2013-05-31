@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "Random Guid/Uuid Generator",
+  "version": "0.0.5", 
+  "description": "Generate and insert a Guid/Uuid (version 4) into a input field",
+  "offline_enabled": true,
+  "homepage_url": "https://github.com/CyberJack/chrome_guid",
+  "permissions": [ "contextMenus" ],
+  "background": {
+    "scripts": [ "src/guid.js" ]
+  },
+  "content_scripts": [ {
+      "all_frames": true,
+      "matches": [ "http://*/*", "https://*/*" ],
+      "js": [ "src/guid_content.js" ]
+  } ],
+  "icons": {
+    "128": "uuid.png",
+    "48": "uuid_48.png",
+    "16": "uuid_16.png"
+  }
+}
